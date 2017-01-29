@@ -6,9 +6,9 @@ date: 2016-11-07
 
 Trots hebben de eerste biomedisch technologen hun diploma en/of registratie in ontvangst genomen.
 
-Namens BMTZ van harte gefeliciteerd!###
+### Namens BMTZ van harte gefeliciteerd!###
 
-### Gediplomeerd QME-CE en Geregistreerd in het kwaliteitsregister:###
+* Gediplomeerd QME-CE en Geregistreerd in het kwaliteitsregister:
 * Armanda Heijneman –  ZorgSaam Zeeuws-Vlaanderen
 * Vera Overdevest  – VieCuri Medisch Centrum
 * Roland Loeffen  – Radboud UMC
