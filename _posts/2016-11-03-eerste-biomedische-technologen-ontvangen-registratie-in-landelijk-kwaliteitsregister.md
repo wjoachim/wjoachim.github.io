@@ -4,8 +4,6 @@ title: "Eerste biomedisch technologen ontvangen registratie in landelijk kwalite
 date: 2016-11-03
 ---
 Op vrijdag 4 november worden de eerste tien biomedisch technologen geregistreerd in het kwaliteitsregister van de beroepsvereniging voor Biomedisch Technologen in de Zorg (BMTZ). Dit is een aanvullende registratie bovenop de academische opleiding Biomedische Technologie, en kan onder meer worden behaald met een praktijkgericht post-mastertraject aan de Technische Universiteit Eindhoven (TU/e), in samenwerking met verschillende ziekenhuizen in Nederland. Biomedisch technologen doen hiermee competenties op in onder meer risicomanagement, procesverbetering en leiderschap.
-<!--more-->
- 
 
 ## Veilig en goed gebruik medische technologie
 
