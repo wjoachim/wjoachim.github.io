@@ -6,7 +6,7 @@ title: Vacatures
 <div class="posts">
   <p>Interessante vacatures kunnen hier gepost worden. Hou deze pagina geregeld in de gaten als je op zoek bent naar een nieuwe functie op het gebied van Biomedische Technologie in de Zorg.</p>
 
-  {% assign vacatures = (site.pages | where: "category" , "vacature") %}
+  {% assign vacatures = (site.posts | where: "category" , "vacature") %}
   {% for post in vacatures %}
   <div class="post">
     <h1 class="post-title">
