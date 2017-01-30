@@ -4,7 +4,7 @@ title: Nieuws
 ---
 
 <div class="posts">
-  {% for post in paginator.posts %}
+  {% for post in site.posts %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
@@ -16,21 +16,4 @@ title: Nieuws
     {{ post.content | strip_html | truncatewords:75 }}
   </div>
   {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Ouder</a>
-  {% else %}
-    <span class="pagination-item older">Ouder</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}">Nieuwer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Nieuwer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Nieuwer</span>
-  {% endif %}
 </div>
