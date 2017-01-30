@@ -1,185 +1,118 @@
-# Immaculate
+# Hyde
 
-A beautiful, fast, AMP-compliant Jekyll theme based on Tufte CSS.
+Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
 
-[Check it out here!](https://cdn.ampproject.org/c/siawyoung.com/immaculate/)
+![Hyde screenshot](https://f.cloud.github.com/assets/98681/1831228/42af6c6a-7384-11e3-98fb-e0b923ee0468.png)
 
-[Google AMP](https://www.ampproject.org/)
 
-[Tufte CSS](https://github.com/edwardtufte/tufte-css)
+## Contents
 
-Immaculate is really fast, thanks to Google AMP. When served over Google's CDN, you will see typical `DOMContentLoaded` times of well under 100ms (when using the leaner stylesheet, see below). The benefits are most obvious for slower connections. On the *Regular - 2G* throttling setting in Chrome, the demo page still manages a `DOMContentLoaded` of under 500ms.
+- [Usage](#usage)
+- [Options](#options)
+  - [Sidebar menu](#sidebar-menu)
+  - [Sticky sidebar content](#sticky-sidebar-content)
+  - [Themes](#themes)
+  - [Reverse layout](#reverse-layout)
+- [Development](#development)
+- [Author](#author)
+- [License](#license)
 
-Immaculate includes tag support for some of the more commonly-used Tufte CSS layout options, including sidenotes, margin notes, and full-width figures. Other features, such as `newthought` or epigraphs, can be used by typing raw HTML in your Markdown files. I might add helper tags for these in the future.
 
-**Caveat (need hep!)**: AMP HTML does not allow form elements, including checkboxes, which are used in Tufte CSS to toggle the display of sidenotes and margin notes at smaller widths. As such, I've modified Immaculate to disable this functionality at smaller widths for the time being. It's a big deal, and I'm looking for help on emulating this functionality without using checkboxes.
+## Usage
 
-## Getting Started
+Hyde is a theme built on top of [Poole](https://github.com/poole/poole), which provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
 
-```
-git clone git@github.com:siawyoung/immaculate.git
-cd immaculate
-bundle install
-bundle exec jekyll serve --baseurl ''
-```
 
-Modify the template files and `_config.yml` to your liking, and publish away!
+## Options
 
-## Helper Tags
+Hyde includes some customizable options, typically applied via classes on the `<body>` element.
 
-Immaculate comes with a few helper tags. The source code for these tags can be found in `_plugins/shortcodes.rb`.
 
-### Image
+### Sidebar menu
 
-```
-{% image <src> <width> <height> <option?> %}
-```
-
-The `image` tag allows you to insert AMP-compliant images into the post.
-
-`src` is the `src` attribute of the image tag.
-
-`width` and `height` of the image must be specified, as per AMP specifications.
-
-`option` - an optional argument which supports the following options:
-
-- `fw` - makes the image full width
-- `raw` - outputs the raw `amp-img` tag, can be used in conjunction with margin notes
-
-##### Example usage
+Create a list of nav links in the sidebar by assigning each Jekyll page the correct layout in the page's [front-matter](http://jekyllrb.com/docs/frontmatter/).
 
 ```
-{% image https://image.com/image.jpg 1200 600 fw %}
+---
+layout: page
+title: About
+---
 ```
 
-### Youtube
+**Why require a specific layout?** Jekyll will return *all* pages, including the `atom.xml`, and with an alphabetical sort order. To ensure the first link is *Home*, we exclude the `index.html` page from this list by specifying the `page` layout.
 
-```
-{% youtube <id> <width> <height> <option?> %}
-```
 
-The `youtube` tag allows you to insert AMP-compliant embedded Youtube videos into the post.
+### Sticky sidebar content
 
-`id` is the Youtube viddeo ID.
+By default Hyde ships with a sidebar that affixes it's content to the bottom of the sidebar. You can optionally disable this by removing the `.sidebar-sticky` class from the sidebar's `.container`. Sidebar content will then normally flow from top to bottom.
 
-`width` and `height` of the video must be specified, as per AMP specifications.
+```html
+<!-- Default sidebar -->
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    ...
+  </div>
+</div>
 
-`option` - an optional argument which supports the following options:
-
-- `fw` - makes the video full width
-- `raw` - outputs the raw `amp-youtube` tag, can be used in conjunction with margin notes
-
-##### Example usage
-
-```
-{% youtube aj2h3h1sf 600 400 %}
-```
-
-### Sidenote
-
-(See caveat above)
-
-```
-{% sidenote <id> <body> %}
+<!-- Modified sidebar -->
+<div class="sidebar">
+  <div class="container">
+    ...
+  </div>
+</div>
 ```
 
-The `sidenote` tag allows you insert sidenotes into the post.
 
-`id` is a unique identifier for the sidenote, and it can be anything - it will not show up visually.
+### Themes
 
-`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+Hyde ships with eight optional themes based on the [base16 color scheme](https://github.com/chriskempson/base16). Apply a theme to change the color scheme (mostly applies to sidebar and links).
 
-##### Example usage
+![Hyde in red](https://f.cloud.github.com/assets/98681/1831229/42b0b354-7384-11e3-8462-31b8df193fe5.png)
 
-```
-This is a very long{% sidenote meh Yes, <i>very</i> long. %} sentence.
-```
+There are eight themes available at this time.
 
-### Margin Note
+![Hyde theme classes](https://f.cloud.github.com/assets/98681/1817044/e5b0ec06-6f68-11e3-83d7-acd1942797a1.png)
 
-(See caveat above)
+To use a theme, add anyone of the available theme classes to the `<body>` element in the `default.html` layout, like so:
 
-```
-{% marginnote <id> %}
-<body>
-{% endmarginnote %}
+```html
+<body class="theme-base-08">
+  ...
+</body>
 ```
 
-The `marginnote` tag block allows you to insert margin notes into the post.
+To create your own theme, look to the Themes section of [included CSS file](https://github.com/poole/hyde/blob/master/public/css/hyde.css). Copy any existing theme (they're only a few lines of CSS), rename it, and change the provided colors.
 
-`id` is a unique identifier for the margin note, and it can be anything - it will not show up visually.
+### Reverse layout
 
-`body` is the body of the sidenote. It can also accommodate `span`-level HTML elements (`<b>`, `<em>`, `<i>`, no block-level elements).
+![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
 
-You can also use margin notes in conjunction with `image` and `youtube` tags by specifying the `raw` option.
+Hyde's page orientation can be reversed with a single class.
 
-##### Example usage
-
-```
-{% marginnote yt %}
-{% youtube aj2h3h1sf 350 200 raw %}
-This is a <b>extremely</b> succinct example.
-{% endmarginnote %}
+```html
+<body class="layout-reverse">
+  ...
+</body>
 ```
 
-### Blockquote
 
-```
-{% blockquote <footer> %}
-<body>
-{% endblockquote %}
-```
+## Development
 
-Standard Markdown blockquotes are supported by Immaculate. Additionally, the `blockquote` tag block allows you to insert Tufte-styled blockquotes with footers.
+Hyde has two branches, but only one is used for active development.
 
-##### Example usage
+- `master` for development.  **All pull requests should be submitted against `master`.**
+- `gh-pages` for our hosted site, which includes our analytics tracking code. **Please avoid using this branch.**
 
-```
-{% blockquote Friedrich Nietzsche, Thus Spoke Zarathustra %}
 
-But say, my brothers, what can the child do that even the lion could not do? Why must the preying lion still become a child? The child is innocence and forgetting, a new beginning, a game, a self-propelled wheel, a first movement, a sacred “Yes.” For the game of creation, my brothers, a sacred “Yes” is needed: the spirit now wills his own will, and he who had been lost to the world now conquers the world.
+## Author
 
-{% endblockquote %}
-```
+**Mark Otto**
+- <https://github.com/mdo>
+- <https://twitter.com/mdo>
 
-## Even faster performance
-
-By default, Immaculate will utilize Tufte CSS's default font stack, which uses `et-book`. The custom font files are about 160kb in total, which is somewhat of a strain. If performance is important, Immaculate also ships with a leaner version of Tufte CSS, which uses just [the Palatino stack instead](http://www.cssfontstack.com/Palatino). It has 99.29% Mac and 86.13% Windows distribution.
-
-You just need to change the following line in `_includes/styles.scss`:
-
-```
-@import 'tufte';
-// change to:
-@import 'lean_tufte';
-```
-
-Just from pure anecdotal experience, using the leaner stylesheet reduces typical `DOMContentLoaded` times from 300ms down to 50ms when served through Google's CDN. Personally, `et-book` just looks a lot better to me, so pick whatever floats your boat.
-
-## Syntax highlighting
-
-Immaculate supports syntax highlighting, but the stylesheet is commented out by default to keep the page lean. Simply uncomment the following line in `_includes/styles.scss`:
-
-```css
-// @import 'syntax-highlighting';
-```
-
-## FAQ
-
-*How can I use the sans-serif versin of Tufte CSS, which uses Gill Sans?*
-
-You can override the CSS style in `_includes/styles.scss` with the font stack of your choice:
-
-```
-body {
-  font-family: "Gill Sans"
-}
-```
-
-## Credits
-
-Credits to [Amplify](https://github.com/ageitgey/amplify) for most of the AMP-related code.
 
 ## License
 
-MIT
+Open sourced under the [MIT license](LICENSE.md).
+
+<3
