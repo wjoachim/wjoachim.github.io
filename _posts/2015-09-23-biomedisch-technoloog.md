@@ -2,9 +2,8 @@
 layout: post
 title: "Biomedisch Technoloog, bij diverse opleidingsziekenhuizen"
 date: 2015-09-23
-category: Vacature
+category: vacature
 ---
-
 
 ##Vacatures Qualified Medical Engineer
 

@@ -4,10 +4,10 @@ title: Vacatures
 ---
 
 <div class="posts">
-  <h1>Vacatures in de Biomedische Technologie in de Zorg</h1>
   <p>Interessante vacatures kunnen hier gepost worden. Hou deze pagina geregeld in de gaten als je op zoek bent naar een nieuwe functie op het gebied van Biomedische Technologie in de Zorg.</p>
 
-  {% for post in site.categories.vacatures %}
+  {% assign vacatures = (site.pages | where: "category" , "vacature") %}
+  {% for post in vacatures %}
   <div class="post">
     <h1 class="post-title">
       <a href="{{ post.url }}">
