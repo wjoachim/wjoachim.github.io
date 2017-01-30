@@ -257,3 +257,9 @@ a.sidebar-nav-item:focus {
 .theme-base-99 .related-posts li a:hover {
   color: #8C8C8C;
 }
+
+
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
