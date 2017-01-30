@@ -4,7 +4,7 @@ title: "Eerste geregistreerde Biomedisch Technologen"
 date: 2016-11-07
 ---
 
-{% include image.html name="smpe-event.jpg" %}
+![placeholder](https://wjoachim.github.io/public/post/images/2016-11-07-eerste-geregistreerde-biomedische-technologen/smpe-event.jpg "Large example image")
 
 
 Trots hebben de eerste biomedisch technologen hun diploma en/of registratie in ontvangst genomen.
