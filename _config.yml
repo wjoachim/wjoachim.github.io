@@ -7,19 +7,20 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:               BMTZ
-tagline:             'Biomedisch Technologen in de zorg'
-description:         'De website van BMTZ, de beroepsvereniging van Biomedisch Technologen in de zorg! Een Biomedisch Technoloog is een professional die in het "grijze gebied" tussen het management, de zorgprofessional en de door technologie gedreven medische processen opereert.'
-url:                 ''
-baseurl:             ''
-paginate:            5
+title:            BMTZ.nl
+tagline:          'Biomedisch Technologen in de zorg'
+description:      'BMTZ, de beroepsvereniging van Biomedisch Technologen in de zorg! Een Biomedisch Technoloog is een professional die in het "grijze gebied" tussen het management, de zorgprofessional en de door technologie gedreven medische processen opereert.'
+url:              https://wjoachim.github.io/
+baseurl:          /
 
-# About/contact
 author:
-  name:              Edger
-  url:               ''
-  email:             info@bmtz.nl
+  name:           'Edger'
+  url:            http://www.bmtz.nl
+
+paginate:         5
 
 # Custom vars
-version:             0.9.0
+version:          0.9.0
 
+github:
+  repo:           https://github.com/poole/hyde
