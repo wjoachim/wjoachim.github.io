@@ -2,7 +2,7 @@
 layout: post
 title: "Eerste geregistreerde BMT’ers op SMPE/e event 4 november 2016"
 date: 2016-10-11
-category: vacature
+category: nieuws
 ---
 
 Op vrijdag 4 november 2016 zullen de eerste 3 kandidaten van het nieuwe poster-master traject. Qualified Medical Engineer, Clinical Engineering hun diploma ontvangen en geregistreerd worden in het Beroepsregister voor Biomedisch Technologen in de Zorg.
