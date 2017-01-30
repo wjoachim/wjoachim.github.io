@@ -7,7 +7,7 @@ date: 2016-11-07
 ![placeholder](https://wjoachim.github.io/public/post/images/2016-11-07-eerste-geregistreerde-biomedisch-technologen/smpe-event.jpg "Large example image")
 
 Trots hebben de eerste biomedisch technologen hun diploma en/of registratie in ontvangst genomen.
-
+<!--more-->
 Namens BMTZ van harte gefeliciteerd!
 
 ### Gediplomeerd QME-CE en Geregistreerd in het kwaliteitsregister:
