@@ -7,20 +7,19 @@ permalink:        pretty
 # relative_permalinks: true
 
 # Setup
-title:            Hyde
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:              http://hyde.getpoole.com
-baseurl:          /
+title:               BMTZ
+tagline:             'Biomedisch Technologen in de zorg'
+description:         'De website van BMTZ, de beroepsvereniging van Biomedisch Technologen in de zorg! Een Biomedisch Technoloog is een professional die in het â€œgrijze gebiedâ€ tussen het management, de zorgprofessional en de door technologie gedreven medische processen opereert.'
+url:                 ''
+baseurl:             ''
+paginate:            5
 
+# About/contact
 author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-paginate:         5
+  name:              Edger
+  url:               ''
+  email:             info@bmtz.nl
 
 # Custom vars
-version:          2.1.0
+version:             0.9.0
 
-github:
-  repo:           https://github.com/poole/hyde
