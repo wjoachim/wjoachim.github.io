@@ -9,12 +9,12 @@ category: vacature
 
 Vacatures voor QME i.o. track Clinical Engineering (QME-CE) bij diverse opleidingsziekenhuizen:
 
-De algemene advertentie
-* beschrijving van opdracht/onderwerpen voor ontwerpproject bij de afzonderlijke opleidingsziekenhuizen
-* Amphia Ziekenhuis (Breda)
-* Laurentius Ziekenhuis (Roermond)
-* Diakonessenhuis (Utrecht)
-* Rijnstate (Arnhem)
+De algemene advertentie:
+*beschrijving van opdracht/onderwerpen voor ontwerpproject bij de afzonderlijke opleidingsziekenhuizen
+*Amphia Ziekenhuis (Breda)
+*Laurentius Ziekenhuis (Roermond)
+*Diakonessenhuis (Utrecht)
+*Rijnstate (Arnhem)
 
 Voor meer informatie over QME-CE, zie hieronder (QME-CE 2016).
 
